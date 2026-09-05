@@ -1,6 +1,7 @@
 ﻿
 
 using Assignment_Adv02.Clasess;
+using System.Globalization;
 
 namespace Assignment_Adv02
 {
@@ -26,32 +27,38 @@ namespace Assignment_Adv02
             new Product { Id=10, Name="Jacket", Category="Clothing", Price=120, Stock=15 }
         };
             #region Question01
-            Console.WriteLine("\n====Electronics====");
-            List<Product> products = Product.SearchProducts(catalog, filter => filter.Category == "Electronics");
-            foreach(Product product in products)
-            {
-                Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
-            }
-            Console.WriteLine("\n====Under 50$====");
-            List<Product> productsUnder50 = Product.SearchProducts(catalog, filter => filter.Price < 50);
-            foreach (Product product in productsUnder50)
-            {
-                Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
-            }
-            Console.WriteLine("\n====In Stock====");
-            List<Product> productsStock = Product.SearchProducts(catalog, filter => filter.Stock > 0);
-            foreach (Product product in productsStock)
-            {
-                Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
-            }
-            Console.WriteLine("\n====Clothing Under 100$====");
-            List<Product> productsClothing = Product.SearchProducts(catalog, filter => filter.Category == "Clothing" && filter.Price < 100);
-            foreach (Product product in productsClothing)
-            {
-                Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
-            }
+            //Console.WriteLine("\n====Electronics====");
+            //List<Product> products = Product.SearchProducts(catalog, filter => filter.Category == "Electronics");
+            //foreach(Product product in products)
+            //{
+            //    Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
+            //}
+            //Console.WriteLine("\n====Under 50$====");
+            //List<Product> productsUnder50 = Product.SearchProducts(catalog, filter => filter.Price < 50);
+            //foreach (Product product in productsUnder50)
+            //{
+            //    Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
+            //}
+            //Console.WriteLine("\n====In Stock====");
+            //List<Product> productsStock = Product.SearchProducts(catalog, filter => filter.Stock > 0);
+            //foreach (Product product in productsStock)
+            //{
+            //    Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
+            //}
+            //Console.WriteLine("\n====Clothing Under 100$====");
+            //List<Product> productsClothing = Product.SearchProducts(catalog, filter => filter.Category == "Clothing" && filter.Price < 100);
+            //foreach (Product product in productsClothing)
+            //{
+            //    Console.WriteLine($"{product.Name} - {product.Price}$ (Stock: {product.Stock})");
+            //}
             #endregion
 
+            #region Question02
+            //Console.WriteLine("\n====Short Report====");
+            // Product.PrintReport(catalog, filter => Console.WriteLine($"{filter.Name} - {filter.Price}$"));
+            //Console.WriteLine("\n====Datiles Report====");
+            //Product.PrintReport(catalog, filter => Console.WriteLine($"{filter.Name} | {filter.Price}$ | Sock: {filter.Stock} [{filter.Category}]"));
+            #endregion
         }
 
     }

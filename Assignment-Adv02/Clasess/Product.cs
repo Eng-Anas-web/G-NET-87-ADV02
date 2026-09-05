@@ -6,10 +6,10 @@ namespace Assignment_Adv02.Clasess
 {
     public class Product
     {
-        public int Id {  get; set; }
-        public string Name {  get; set; }
-        public string Category {  get; set; }
-        public double Price {  get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public double Price { get; set; }
         public int Stock { get; set; }
 
 
@@ -17,7 +17,7 @@ namespace Assignment_Adv02.Clasess
         public static List<Product> SearchProducts(List<Product> products, Func<Product, bool> filter)
         {
             List<Product> result = new List<Product>();
-            for(int i =0; i <products.Count; i++)
+            for (int i = 0; i < products.Count; i++)
             {
                 if (filter(products[i]))
                 {
@@ -26,6 +26,14 @@ namespace Assignment_Adv02.Clasess
             }
             return result;
         }
-    }
-}
 
+        public static void PrintReport(List<Product> products, Action<Product> action)
+        {
+            foreach (Product product in products)
+            {
+                action(product);
+            }
+        }
+    }
+
+}
