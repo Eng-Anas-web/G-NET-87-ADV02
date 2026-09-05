@@ -75,6 +75,16 @@ namespace Assignment_Adv02
             //    Console.WriteLine(product);
             //}
             #endregion
+
+            #region Question04
+            //List<Product> products = Product.FilterProducts(catalog, filter => filter.Stock < 20);
+
+            //Console.WriteLine("======Low-Stock Alert========");
+            //foreach(Product product in products)
+            //{
+            //    Console.WriteLine($"{product.Name}: only {product.Stock} left! [LOW STOCK]");
+            //}
+            #endregion
         }
 
     }

@@ -35,15 +35,29 @@ namespace Assignment_Adv02.Clasess
             }
         }
 
-        public static List<T> TransformProducts<T>(List<Product> products, Func<Product , T> filter)
+        public static List<T> TransformProducts<T>(List<Product> products, Func<Product, T> filter)
         {
-            List<T> result = new List<T> ();
-            for(int i = 0;i<products.Count; i++)
+            List<T> result = new List<T>();
+            for (int i = 0; i < products.Count; i++)
             {
                 result.Add(filter(products[i]));
             }
             return result;
         }
-    }
 
+        public static List<T> FilterProducts<T>(List<T> products, Predicate<T> filter)
+        {
+            List<T> result = new List<T>();
+            for (int i = 0; i < products.Count; i++)
+            {
+                if (filter(products[i]))
+                {
+                    result.Add(products[i]);
+                }
+               
+            }
+            return result;
+
+        }
+    }
 }
