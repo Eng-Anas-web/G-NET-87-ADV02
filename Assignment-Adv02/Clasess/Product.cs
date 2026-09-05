@@ -34,6 +34,16 @@ namespace Assignment_Adv02.Clasess
                 action(product);
             }
         }
+
+        public static List<T> TransformProducts<T>(List<Product> products, Func<Product , T> filter)
+        {
+            List<T> result = new List<T> ();
+            for(int i = 0;i<products.Count; i++)
+            {
+                result.Add(filter(products[i]));
+            }
+            return result;
+        }
     }
 
 }

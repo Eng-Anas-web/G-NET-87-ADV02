@@ -59,6 +59,22 @@ namespace Assignment_Adv02
             //Console.WriteLine("\n====Datiles Report====");
             //Product.PrintReport(catalog, filter => Console.WriteLine($"{filter.Name} | {filter.Price}$ | Sock: {filter.Stock} [{filter.Category}]"));
             #endregion
+
+            #region Question03
+            //Console.WriteLine("\n====Summary List====");
+            //List<string> products = Product.TransformProducts(catalog, filter => $"{filter.Name} ({filter.Price}$)");
+            //foreach(string product in products)
+            //{
+            //    Console.WriteLine(product);
+            //}
+            //Console.WriteLine("\n====Price Labels====");
+            //List<string> productss = Product.TransformProducts(catalog, filter => (filter.Price > 100) ? $"{filter.Name}: Expensive!" : $"{filter.Name}: Affordable!");
+
+            //foreach (string product in productss)
+            //{
+            //    Console.WriteLine(product);
+            //}
+            #endregion
         }
 
     }
